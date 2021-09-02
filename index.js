@@ -21,7 +21,7 @@ server.use(cors())
 //server.use(express.static(path.join(_dirname, "client/build")))
 
 server.get('/', (req, res) => {
-    res.send(`<h1>Web 45 ROCKS!</h1>`)
+    res.send(`<h1>HEROKU  APP UNIT 4.1.4</h1>`)
 })
 
 //Send to build folder in react client
