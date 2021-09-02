@@ -1,11 +1,7 @@
 require("dotenv").config()
-//for deploying react app
-//const path = require("path")
+
 const express = require('express')
 const cors = require('cors')
-
-// console.log("USER >>:", process.env.USER, "HOME>>>:", process.env.HOME)
-// console.log("PORT >>:", process.env.PORT, "SECRET >>: ", process.env.API_SECRET)
 
 console.log("USER >>:", process.env.USER)
 console.log("HOME>>>:", process.env.HOME)
@@ -17,17 +13,13 @@ const server = express()
 
 server.use(express.json())
 server.use(cors())
-//Join the react app
-//server.use(express.static(path.join(_dirname, "client/build")))
+
 
 server.get('/', (req, res) => {
     res.send(`<h1>HEROKU  APP UNIT 4.1.4</h1>`)
 })
 
 //Send to build folder in react client
-// server.get("*", (req,res) => {
-//     res.sendFile(path.join(_dirname, "client/build", "index.html"))
-// })
 server.get('/api', (req, res) => {
     res.json({ message: 'HEROKU  APP UNIT 4.1.4' })
 })
