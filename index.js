@@ -29,7 +29,7 @@ server.get('/', (req, res) => {
 //     res.sendFile(path.join(_dirname, "client/build", "index.html"))
 // })
 server.get('/api', (req, res) => {
-    res.json({ message: 'Web 45 is awesome!' })
+    res.json({ message: 'HEROKU APP UNIT 4.1.4' })
 })
 
 server.listen(process.env.PORT, () => {
